@@ -10,6 +10,8 @@ CONFIG = {
             "start": 29.45,
             "end": 46.0 * 60 + 53,
         },
+        "intro": "Images/5-matthieu-amiguet.png",
+        "outro": "Images/outro.png",
         "output": "Video/5-matthieu-amiguet-python-for-live-music.mp4",
     }
 }
@@ -21,12 +23,18 @@ def process(item):
     offset = (item['video_offset']['start'], item['video_offset']['end'])
     print('--> Using audio "%s"...' % audio)
     print('--> Using video "%s"...' % video)
+    intro_duration = 3
+    framerate = 25
     command = [
         'ffmpeg',
         # Input files
+        '-itsoffset', str(intro_duration),
         '-ss', str(offset[0]),
         '-t', str(offset[1]),
         '-i', video,
+        '-loop', '1',
+        '-i', str(item['intro']),
+        '-itsoffset', str(intro_duration),
         '-i', audio,
         # Codecs
         '-codec:v', 'h264',
@@ -34,13 +42,17 @@ def process(item):
         # Bitrate and framerate
         '-b:v', '8000k',
         '-b:a', '384k',
-        '-r:v', '25',
+        '-r:v', str(framerate),
+        # Filter
+        '-filter_complex', '[1:v] fade=out:%s:%s:alpha=1 [intro];' \
+                           % (framerate * intro_duration, framerate) +
+                           '[0:v][intro] overlay [v]',
         # Input channel mapping
-        '-map', '0:v:0',
-        '-map', '1:a:0',
+        '-map', '[v]',
+        '-map', '2:a:0',
         #'-filter_complex', 'amix=inputs=2:duration=first',
         # Video filters
-        '-filter:v', 'hqdn3d',
+        #'-filter:v', 'hqdn3d', TODO
         # Other options
         '-strict', '-2',
         # Duration of video
