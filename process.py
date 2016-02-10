@@ -46,13 +46,12 @@ def process(item):
         # Filter
         '-filter_complex', '[1:v] fade=out:%s:%s:alpha=1 [intro];' \
                            % (framerate * intro_duration, framerate) +
-                           '[0:v][intro] overlay [v]',
+                           '[0:v] hqdn3d [talk];' + \
+                           '[talk][intro] overlay [v]',
         # Input channel mapping
         '-map', '[v]',
         '-map', '2:a:0',
         #'-filter_complex', 'amix=inputs=2:duration=first',
-        # Video filters
-        #'-filter:v', 'hqdn3d', TODO
         # Other options
         '-strict', '-2',
         # Duration of video
