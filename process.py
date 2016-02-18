@@ -14,6 +14,18 @@ CONFIG = {
         "intro": "Images/5-matthieu-amiguet.png",
         "outro": "Images/outro.png",
         "output": "Video/5-matthieu-amiguet-python-for-live-music.mp4",
+    },
+    6: {
+        "audio": "Audio/6-chihway-chang-decoding-the-cosmos.flac",
+        "video": "Video/block3.mp4",
+        "video_offset": {
+            "start": 49.0 * 60 + 11.0,
+            "end": 86.0 * 60 + 50.0,
+        },
+        "audio_offset": 0.4504,
+        "intro": "Images/6-chihway-chang.png",
+        "outro": "Images/outro.png",
+        "output": "Video/6-chihway-chang-decoding-the-cosmos.mp4",
     }
 }
 
