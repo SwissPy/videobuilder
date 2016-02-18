@@ -10,6 +10,7 @@ CONFIG = {
             "start": 29.45,
             "end": 46.0 * 60 + 53,
         },
+        "audio_offset": 0.0,
         "intro": "Images/5-matthieu-amiguet.png",
         "outro": "Images/outro.png",
         "output": "Video/5-matthieu-amiguet-python-for-live-music.mp4",
@@ -20,7 +21,7 @@ CONFIG = {
 def process(item):
     audio = item['audio']
     video = item['video']
-    offset = (item['video_offset']['start'], item['video_offset']['end'])
+    offset = (item['video_offset']['start'], item['video_offset']['end'], item['audio_offset'])
     duration = offset[1] - offset[0]
     print('--> Using audio "%s"...' % audio)
     print('--> Using video "%s"...' % video)
@@ -46,12 +47,8 @@ def process(item):
         '-i', str(item['outro']),
 
         # Input 3: Audio
-        '-itsoffset', str(intro_duration),
+        '-itsoffset', str(intro_duration + offset[2]),
         '-i', audio,
-
-        # Input channel mapping
-        '-map', '[v]',
-        '-map', '3:a:0',
 
         # Codecs
         '-codec:v', 'h264',
@@ -70,7 +67,11 @@ def process(item):
                            '[1:v] hqdn3d [talk];' + \
                            '[talk][intro] overlay [tmp];' + \
                            '[tmp][outro] overlay [v]',
-        # '-filter_complex', 'amix=inputs=2:duration=first',
+        #'-filter_complex', 'amix=inputs=2:duration=first',
+
+        # Input channel mapping
+        '-map', '[v]',
+        '-map', '3:a:0',
 
         # Total duration
         '-t', str(intro_duration + duration + outro_duration),
