@@ -3,6 +3,18 @@ import subprocess
 
 
 CONFIG = {
+    1: {
+        "audio": "Audio/1-tom-ron-pythons-guide-to-the-galaxy.flac",
+        "video": "Video/block1.mp4",
+        "video_offset": {
+            "start": 12.0 * 60 + 40.7,
+            "end": 35.0 * 60 + 54.2,
+        },
+        "audio_offset": 0.5,
+        "intro": "Images/1-tom-ron.png",
+        "outro": "Images/outro.png",
+        "output": "Video/1-tom-ron-pythons-guide-to-the-galaxy.mp4",
+    },
     5: {
         "audio": "Audio/5-matthieu-amiguet-python-for-live-music.flac",
         "video": "Video/block3.mp4",
