@@ -38,7 +38,19 @@ CONFIG = {
         "intro": "Images/6-chihway-chang.png",
         "outro": "Images/outro.png",
         "output": "Video/6-chihway-chang-decoding-the-cosmos.mp4",
-    }
+    },
+    9: {
+        "audio": "Audio/9-florian-bruhin-pytest.flac",
+        "video": "Video/block4.mp4",
+        "video_offset": {
+            "start": 3600.0 + 4.0 * 60 + 29.0,
+            "end": 3600.0 + 25.0 * 60 + 45.0,
+        },
+        "audio_offset": 0.4663,
+        "intro": "Images/9-florian-bruhin.png",
+        "outro": "Images/outro.png",
+        "output": "Video/9-florian-bruhin-pytest.mp4",
+    },
 }
 
 
