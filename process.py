@@ -15,6 +15,18 @@ CONFIG = {
         "outro": "Images/outro.png",
         "output": "Video/1-tom-ron-pythons-guide-to-the-galaxy.mp4",
     },
+    2: {
+        "audio": "Audio/2-dave-halter-api-design-is-hard-shorter.flac",
+        "video": "Video/block1.mp4",
+        "video_offset": {
+            "start": 39.0 * 60 + 39.5,
+            "end": 85.0 * 60 + 40.0,
+        },
+        "audio_offset": 0.33,  # 39:39.82227-82251
+        "intro": "Images/2-dave-halter.png",
+        "outro": "Images/outro.png",
+        "output": "Video/2-dave-halter-api-design-is-hard.mp4",
+    },
     5: {
         "audio": "Audio/5-matthieu-amiguet-python-for-live-music.flac",
         "video": "Video/block3.mp4",
