@@ -27,6 +27,18 @@ CONFIG = {
         "outro": "Images/outro.png",
         "output": "Video/2-dave-halter-api-design-is-hard.mp4",
     },
+    3: {
+        "audio": "Audio/3-armin-rigo-cffi.flac",
+        "video": "Video/block2.mp4",
+        "video_offset": {
+            "start": 13.9855,
+            "end": 37.0 * 60 + 30.85,
+        },
+        "audio_offset": 0.08,  # 39:39.82227-82251
+        "intro": "Images/3-armin-rigo.png",
+        "outro": "Images/outro.png",
+        "output": "Video/3-armin-rigo-cffi.mp4",
+    },
     5: {
         "audio": "Audio/5-matthieu-amiguet-python-for-live-music.flac",
         "video": "Video/block3.mp4",
