@@ -22,7 +22,7 @@ CONFIG = {
             "start": 39.0 * 60 + 39.5,
             "end": 85.0 * 60 + 40.0,
         },
-        "audio_offset": 0.33,  # 39:39.82227-82251
+        "audio_offset": 0.33,
         "intro": "Images/2-dave-halter.png",
         "outro": "Images/outro.png",
         "output": "Video/2-dave-halter-api-design-is-hard.mp4",
@@ -34,10 +34,22 @@ CONFIG = {
             "start": 13.9855,
             "end": 37.0 * 60 + 30.85,
         },
-        "audio_offset": 0.08,  # 39:39.82227-82251
+        "audio_offset": 0.08,
         "intro": "Images/3-armin-rigo.png",
         "outro": "Images/outro.png",
         "output": "Video/3-armin-rigo-cffi.mp4",
+    },
+    4: {
+        "audio": "Audio/4-martin-3d-graphics-shortened.flac",
+        "video": "Video/block2.mp4",
+        "video_offset": {
+            "start": 38.0 * 60 + 34.0,
+            "end": 3600.0 + 15.0 * 60 + 19.0,
+        },
+        "audio_offset": 0.5,
+        "intro": "Images/4-martin-christen.png",
+        "outro": "Images/outro.png",
+        "output": "Video/4-martin-christen-3d-graphics.mp4",
     },
     5: {
         "audio": "Audio/5-matthieu-amiguet-python-for-live-music.flac",
