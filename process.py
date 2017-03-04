@@ -87,6 +87,18 @@ CONFIG = {
         "outro": "Images/outro.png",
         "output": "Video/7-michael-ruuegg-scrapy.mp4",
     },
+    8: {
+        "audio": "Audio/8-jacinda-ipython.flac",
+        "video": "Video/block4.mp4",
+        "video_offset": {
+            "start": 33.0 * 60 + 40.1,
+            "end": 60.0 * 60 + 47.0,
+        },
+        "audio_offset": 0.24,
+        "intro": "Images/8-jacinda-shelly.png",
+        "outro": "Images/outro.png",
+        "output": "Video/8-jacinda-shelly-ipython.mp4",
+    },
     9: {
         "audio": "Audio/9-florian-bruhin-pytest.flac",
         "video": "Video/block4.mp4",
