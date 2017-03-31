@@ -17,3 +17,17 @@ Operations done by this script:
 - Re-encode audio as aac / 384 kbps
 
 The conversion is handled by ffmpeg.
+
+## 2017
+
+Input is a list of video files.
+
+Operations done by this script:
+
+- Take the input video
+- Apply offset and duration for desired part
+- Apply a/v offset to align them properly
+- Apply noise removal filter
+- Add intro / outro
+
+The conversion is handled by ffmpeg.
