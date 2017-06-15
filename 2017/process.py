@@ -13,6 +13,86 @@ CONFIG = {
         'outro': 'Images/outro.png',
         'output': '1-gael-varoquaux-keynote.mp4',
     },
+    2: {
+        'video': 'Videos/block1.MTS',
+        'video_offset': {
+            'start': 3150.0,
+            'end': 4907.0,
+        },
+        'intro': 'Images/radomir-dopieralski.png',
+        'outro': 'Images/outro.png',
+        'output': '2-radomir-dopieralski-robots.mp4',
+    },
+    3: {
+        'video': 'Videos/block2.MTS',
+        'video_offset': {
+            'start': 17.0,
+            'end': 1787.0,
+        },
+        'intro': 'Images/armin-rigo.png',
+        'outro': 'Images/outro.png',
+        'output': '3-armin-rigo-revdb.mp4',
+    },
+    4: {
+        'video': 'Videos/block2.MTS',
+        'video_offset': {
+            'start': 1833.0,
+            'end': 3585.0,
+        },
+        'intro': 'Images/barnaby-skinner.png',
+        'outro': 'Images/outro.png',
+        'output': '4-barnaby-skinner-court-scraping.mp4',
+    },
+    5: {
+        'video': 'Videos/block2.MTS',
+        'video_offset': {
+            'start': 3637.0,
+            'end': 5612.0,
+        },
+        'intro': 'Images/dave-halter.png',
+        'outro': 'Images/outro.png',
+        'output': '5-dave-halter-python-is-weird.mp4',
+    },
+    6: {
+        'video': 'Videos/block3.MTS',
+        'video_offset': {
+            'start': 25.0,
+            'end': 1828.0,
+        },
+        'intro': 'Images/dan-maas.png',
+        'outro': 'Images/outro.png',
+        'output': '6-dan-maas-online-games.mp4',
+    },
+    7: {
+        'video': 'Videos/block3.MTS',
+        'video_offset': {
+            'start': 1862.7,
+            'end': 3788.0,
+        },
+        'intro': 'Images/aarno-aukia.png',
+        'outro': 'Images/outro.png',
+        'output': '7-aarno-aukia-scalable-python.mp4',
+    },
+    8: {
+        'video': 'Videos/block4.MTS',
+        'video_offset': {
+            'start': 21.8,
+            'end': 1948.0,
+        },
+        'intro': 'Images/rae-knowler.png',
+        'outro': 'Images/outro.png',
+        'output': '8-rae-knowler-locales.mp4',
+    },
+    9: {
+        'video': 'Videos/block4.MTS',
+        'video_offset': {
+            'start': 2230.0,
+            'end': 4103.0,
+        },
+        'intro': 'Images/raphael-nestler.png',
+        'outro': 'Images/outro.png',
+        'output': '9-raphael-nestler-python-hardware.mp4',
+    },
 }
 
 
