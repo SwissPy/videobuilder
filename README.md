@@ -26,8 +26,11 @@ Operations done by this script:
 
 - Take the input video
 - Apply offset and duration for desired part
-- Apply a/v offset to align them properly
 - Apply noise removal filter
 - Add intro / outro
 
 The conversion is handled by ffmpeg.
+
+## 2018
+
+Like 2017.
