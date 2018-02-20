@@ -33,4 +33,4 @@ The conversion is handled by ffmpeg.
 
 ## 2018
 
-Like 2017.
+Like 2017, but with an added blur option.

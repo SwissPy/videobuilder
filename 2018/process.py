@@ -53,10 +53,22 @@ CONFIG = {
         'outro': 'img/outro.png',
         'output': 'out/5-iacopo-spalletti-real-time-django.mp4',
     },
+    6: {
+        'video': 'raw/block3.mts',
+        'video_offset': {
+            'start': 35.0,
+            'end': 1715.0,
+            'blur_start': 729.0,
+            'blur_end': 756.0,
+        },
+        'intro': 'img/sarah-muehlemann.png',
+        'outro': 'img/outro.png',
+        'output': 'out/6-sarah-muehlemann-spypi.mp4',
+    },
 }
 
 
-def process(item, part1=True, part2=True):
+def process(item, part1=True, part2=True, blur=False):
     print('--> Part a: %s, part b: %s...' % (part1, part2))
     video = item['video']
     offset = (item['video_offset']['start'], item['video_offset']['end'])
@@ -107,6 +119,15 @@ def process(item, part1=True, part2=True):
         subprocess.check_call(command1)
 
     if part2:
+        if blur:
+            start = item['video_offset']['blur_start'] - item['video_offset']['start']
+            end = item['video_offset']['blur_end'] - item['video_offset']['start']
+            blur_filter = '[1:v] crop=280:40:685:485,boxblur=10 [blur];' + \
+                          '[1:v][blur] overlay=685:485:enable=\'between(t,%d,%d)\' [blurred];' \
+                          % (start, end)
+        else:
+            blur_filter = '[1:v] copy [blurred];'
+
         command2 = [
             'ffmpeg',
 
@@ -142,8 +163,11 @@ def process(item, part1=True, part2=True):
                 '[2:v] fade=in:0:%s:alpha=1 [outro];' \
                 % (framerate + outro_duration) +
 
+                # Optional blur
+                blur_filter + \
+
                 # Overlay talk with intro and outro
-                '[1:v][intro] overlay [tmp];' + \
+                '[blurred][intro] overlay [tmp];' + \
                 '[tmp][outro] overlay [v];' + \
 
                 # Add fade in and fade out to audio
@@ -188,4 +212,4 @@ if __name__ == '__main__':
         part1 = True
         part2 = True
     print('Processing talk number %s...' % nr)
-    process(CONFIG[nr], part1, part2)
+    process(CONFIG[nr], part1, part2, nr == 6)
