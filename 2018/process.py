@@ -65,6 +65,36 @@ CONFIG = {
         'outro': 'img/outro.png',
         'output': 'out/6-sarah-muehlemann-spypi.mp4',
     },
+    7: {
+        'video': 'raw/block3.mts',
+        'video_offset': {
+            'start': 1823.0,
+            'end': 3763.0,
+        },
+        'intro': 'img/amit-kumar.png',
+        'outro': 'img/outro.png',
+        'output': 'out/7-amit-kumar-gil.mp4',
+    },
+    8: {
+        'video': 'raw/block4.mts',
+        'video_offset': {
+            'start': 121.0,
+            'end': 1836.0,
+        },
+        'intro': 'img/josef-spillner.png',
+        'outro': 'img/outro.png',
+        'output': 'out/8-josef-spillner-serverless.mp4',
+    },
+    9: {
+        'video': 'raw/block4.mts',
+        'video_offset': {
+            'start': 2088.0,
+            'end': 4011.0,
+        },
+        'intro': 'img/peter-hoffmann.png',
+        'outro': 'img/outro.png',
+        'output': 'out/9-peter-hoffmann-12-factor-apps.mp4',
+    },
 }
 
 
